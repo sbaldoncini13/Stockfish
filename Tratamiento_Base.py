@@ -73,82 +73,6 @@ B20-B99                 Defensa Siciliana
       B60-B69                   Ataque Richter Rauzer
       B70-B79                   Variante Dragon
             B72                   Sistema Clasico
-            B76-B78                      Ataque Yugoslavo
-      B80-B89                   Variante Scheveningen
-            B81                   Sistema Keres
-            B86-B87                      Sistema Fischer/Sozin
-      B90-B99                   Sistema Najdorf
-            B96                   Sistema Goteborg
-            B97                   Sistema del Peon Envenenado
-C00-C20                 Defensa Francesa
-      C01                 Variante del Cambio
-      C02                 Variante del Avance
-      C03-C09                   Variante Tarrasch
-            C03                   Sistema 3.... a6
-            C04                   Sistema 3.... Cc6
-            C05-C06                      Sistema 3.... Cf6
-            C07-C09                      Sistema 3.... c5
-      C10                 Variante Rubinstein
-      C11                 Variante Steinitz
-      C12                  Variante MacCutcheon
-      C15-C20                    Variante Winawer
-           C15                     Sistema Lapus Manus
-           C17                     Sistema Suizo
-           C18                     Linea Principal
-           C20                     Sistema del Cambio
-C21               Gambito Nordico
-C22               Partida de Centro
-C23-C24                 Apertura del Alfil
-C25-C29                 Apertura Vienesa
-C30-C39                 Gambito de Rey
-      C31-C32                   Contragambito Falkbeer
-      C33                 Variante Keres
-      C35                 Variante Cunningham
-      C36                 Variante Moderna
-      C37                 Gambito Muzio
-      C38                 Gambitos Greco y Philidor
-      C39                 Gambitos Allagier y Kiesertisky
-C40               Gambito Leton
-C41               Defensa Philidor
-C42-C43                 Defensa Rusa (Petroff)
-C44               Apertura Ponziani
-C45               Apertura Escocesa
-C46               Apertura Tres Caballos
-C47-C49                 Apertura Cuatro Caballos
-C50-C59                 Apertura Italiana (Guioco Piano)
-      C50                 Defensa Hungara
-      C51-C52                   Gambito Evans
-      C55                 Defensa Dos Caballos
-      C56                 Ataque Max Lange
-      C57-C59                   Defensa Dos Caballos
-C60-C99                 Apertura Española (Ruy Lopez)
-      C61                 Defensa Bird
-      C62                 Defensa Steinitz Antigua
-      C63                 Gambito Schliemann
-      C64                 Defensa Cordel
-      C65                 Defensa Berlin
-      C66                 Defensa Steinitz Moderna
-      C67                 Defensa Rio de Janeiro
-      C68-C69                   Variante del Cambio
-      C71-C76                   Defensa Steinitz Moderna
-      C77                 Variante Anderssen
-      C78                 Variante Arcangel; Ataque Moeller
-      C79                 Variante Rusa
-      C80-C83                   Variante Abierta
-            C80                    Sistema Bernstein
-            C81                    Sistema Keres
-            C83                    Linea Principal
-      C84                 Ataque de Centro
-      C85                 Variante del Cambio Doblemente Diferida
-      C86                 Ataque Worral
-      C88                 Gambito Marshall
-      C92                 Variante Zaitsev
-      C93                 Variante Smyslov
-      C94-C95                   Variante Breyer
-      C96-C99                   Tchigorin
-D00               Apertura de Peon de Dama
-D01               Apertura Veresov
-D02               Apertura Gruenfeld Invertida
 D03               Ataque Torre, Variante Tartakower
 D04               Apertura de Peon de Dama
 D05               Sistema Colle
@@ -289,7 +213,6 @@ df_partidas = pd.DataFrame({
 
 df_merged = pd.merge(df_partidas, eco_df, on="ECO", how="left")
 
-# Exportar el DataFrame resultante a un archivo Excel
-df_merged.to_excel("I:/ITBA/partidas_con_aperturas_completas.xlsx", index=False)
+# Exportar el DataFrame resultante a un archivo CSV
+df_merged.to_csv("I:/ITBA/partidas_con_aperturas_completas.csv", index=False)
 
-print("El archivo Excel 'partidas_con_aperturas_completas.xlsx' se ha creado exitosamente.")
